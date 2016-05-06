@@ -80,11 +80,11 @@ $contactForm.submit(function(e) {
         data: $(this).serialize(),
         dataType: 'json',
         beforeSend: function() {
-            $contactForm.append('<div class="alert alert--loading">Sending message…</div>');
+            $contactForm.append('<form id="contact-form" >Sending message…</form>');
         },
         success: function(data) {
             $contactForm.find('.alert--loading').hide();
-            $contactForm.append(' <a href="thankyou.html"><div class="alert alert--success"> </div> </a>');
+            $contactForm.append(' <div class="alert alert--success"> </div> ');
         },
         error: function(err) {
             $contactForm.find('.alert--loading').hide();
