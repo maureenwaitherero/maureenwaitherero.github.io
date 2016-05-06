@@ -84,7 +84,7 @@ $contactForm.submit(function(e) {
         },
         success: function(data) {
             $contactForm.find('.alert--loading').hide();
-            $contactForm.append('<div class="alert alert--success">Message sent!</div>');
+            $contactForm.append('thankyou.html');
         },
         error: function(err) {
             $contactForm.find('.alert--loading').hide();
