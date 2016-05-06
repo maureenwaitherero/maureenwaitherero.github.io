@@ -79,12 +79,16 @@ $contactForm.submit(function(e) {
         method: 'POST',
         data: $(this).serialize(),
         dataType: 'json',
-        beforeSend: function() {
+        /*beforeSend: function() {
             $contactForm.append('<form id="contact-form" >Sending message…</form>');
-        },
-        success: function(data) {
+        },*/
+       /* success: function(data) {
             $contactForm.find('.alert--loading').hide();
             $contactForm.append(' <div class="alert alert--success"> </div> ');
+        },*/
+
+        success: function(){
+        $('#contact-form').html(response);   //select the id and put the response in the html
         },
         error: function(err) {
             $contactForm.find('.alert--loading').hide();
