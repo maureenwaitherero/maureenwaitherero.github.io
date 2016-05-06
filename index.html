@@ -468,13 +468,15 @@
         </div>
         <div class="field tnb ">
           <label for="email">Email address</label>
-          <input type="email" id="email" name="e-mail" required/>
+          <input type="email" id="email" name="_replyto" required/>
         </div>
+        <input type="hidden" name="_subject" value="Website contact" />
         <div class="field tnb ">
           <label for="msg">Message</label>
-          <textarea name="msg" required></textarea>
+          <textarea name="message" required></textarea>
         </div>
          <center><input  type="submit" value="Send" /></center>
+         <input type="hidden" name="_next" value="thanks.html" />
       </form>
    
    </div>
@@ -602,6 +604,8 @@
     }
 });
 </script>
+
+
 
   
 </body>
