@@ -70,6 +70,9 @@ $(function() {
             });
       	
 
+
+document.getElementById("#contact-form").reset();
+
 /*formspree ajax*/
 var $contactForm = $('#contact-form');
 $contactForm.submit(function(e) {
@@ -79,16 +82,22 @@ $contactForm.submit(function(e) {
         method: 'POST',
         data: $(this).serialize(),
         dataType: 'json',
-        /*beforeSend: function() {
-            $contactForm.append('<form id="contact-form" >Sending message…</form>');
-        },*/
-       /* success: function(data) {
-            $contactForm.find('.alert--loading').hide();
-            $contactForm.append(' <div class="alert alert--success"> </div> ');
-        },*/
 
-        success: function(){
-        $('#contact-form').html(response);   //select the id and put the response in the html
+
+
+
+        beforeSend: function() {
+            $contactForm.append('<div class="alert alert--success">Sending message… </div>');
+        },
+        success: function(data) {
+            $contactForm.find('.alert--loading').hide();
+            $contactForm.append(' <div class="alert alert--success"> Message sent </div> ');
+
+            function resetForm(#contact-form) {
+                $('#' + #contact-form + ' :input').each(function(){  
+            $(this).val('').attr('checked',false).attr('selected',false);
+            });
+            }
         },
         error: function(err) {
             $contactForm.find('.alert--loading').hide();
