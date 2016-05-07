@@ -74,7 +74,7 @@ $(function() {
 
 
 /*formspree ajax*/
-var $contactForm = $('#contact-form');
+/*var $contactForm = $('#contact-form');
 $contactForm.submit(function(e) {
     e.preventDefault();
     $.ajax({
@@ -94,7 +94,7 @@ $contactForm.submit(function(e) {
             $contactForm.append('<div class="alert alert--error">Oops, there was an error send error.</div>');
         }
     });
-});
+});*/
 
 
 
