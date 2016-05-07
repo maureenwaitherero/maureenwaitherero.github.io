@@ -995,6 +995,15 @@ site buttons styling
   transition: 1s ease;
 }
 
+.ghost:hover a {
+  background-color: #369;
+  color: #fff;
+  -moz-box-shadow: 0 0 8px rgba(0, 0, 0, .09);
+  -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, .09);
+  box-shadow: 0 0 8px rgba(0, 0, 0, .09);
+  transition: 1s ease;
+}
+
 
 .lg {
   width: 50%;
