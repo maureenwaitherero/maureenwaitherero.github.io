@@ -357,6 +357,29 @@ About section
     color: #000;
 }
 
+.fonts-folio{
+  font-family: KGBrokenVesselsSketch;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 1.8em;
+    color: #000;
+}
+
+.portmdal{
+  font-family: "Inconsolata", serif;
+ font-size: 0.8em;
+ font-weight: 900;
+ letter-spacing: 2px;
+ color: #000;
+
+
+}
+
+.porthead{
+  font-family: Mathlete;;
+  font-size: 0.5em;
+}
+
 .content-box {
     margin: 25px auto;
 }
